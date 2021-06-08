@@ -1,0 +1,92 @@
+/* MAIN  */
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 1em;
+    line-height: 1.5;
+    background-color: #0c0c0c;
+    color: white;
+}
+
+img{
+    max-width: 100%;
+}
+
+h2{
+    margin-top: 0;
+}
+
+/* BUTTONS  */
+
+.btn{
+    text-decoration: none;
+    background: 0;
+    border: 0;
+    cursor: pointer;
+
+    font-size: 1.75rem;
+    color: white;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: -10%;
+    width: 80%;
+    height: 50%;
+    background-color: #473b42;
+    z-index: -1;
+    transform-origin: bottom left;
+    transition: transform 250ms ease;
+}
+
+.btn:hover::before,
+.btn:focus::before{
+    transform: scale(1.5, 2.25);
+}
+
+/* NAVIGATION  */
+
+.nav{
+    display: flex;
+    flex-basis: 1;
+    justify-content: space-around;
+}
+
+/* FOOTER  */
+
+.icons{
+    margin: 2.5em 0;
+    margin-left: auto;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icons img{
+    width: 30px;
+    opacity: .7;
+    transition: opacity 250ms;
+}
+
+.icons img:hover{
+    opacity: 1;
+}
+
+@media (min-width: 50em){
+    .btn{
+        font-size: 2rem;
+    }
+}

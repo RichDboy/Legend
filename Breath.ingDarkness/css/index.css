@@ -1,0 +1,155 @@
+/* INTRO  */
+
+.context h2{
+    animation: down 2s forwards 1s;
+    opacity: 0;
+}
+
+.logo{
+    animation: down 2s forwards;
+}
+
+.intro{
+    font-size: 1.75rem;
+    animation: up 2s forwards 1s;
+    opacity: 0;
+}
+
+/* IMAGES */
+
+.images{
+    position: relative;
+}
+
+.picture1,
+.picture2{
+    margin: 1.5em 0;
+    width: 55%;
+    max-width: 300px;
+}
+
+.picture1{
+    box-shadow: 1em 1em 0 rgba(0, 0, 0, 0.6);
+    animation: down 2s forwards;
+}
+
+.picture2{
+    display: block;
+    margin-left: auto;
+    box-shadow: -1em -1em 0 rgba(0, 0, 0, 0.6);
+    animation: up 2s forwards 1s;
+    opacity: 0;
+}
+
+.cube{
+    position: absolute;
+    right: 0;
+    width: 70%;
+    height: 70%;
+    background-color: #473b42;
+    z-index: -1;
+}
+
+/* TEXT  */
+
+.text-box .btn{
+    margin-left: 1em;
+}
+
+.flexbox{
+    margin: 5em auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+
+    font-size: 1.75rem;
+    animation: down 2s forwards;
+}
+
+.flex{
+    flex: 1 1 100%;
+    border: 1px solid #473b42;
+    border-radius: .5em;
+}
+
+.flex-item{
+    margin: 0;
+    padding: 1em;
+}
+
+@media (min-width: 50em){
+    .main-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .top{
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .context{
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        align-self: flex-end;
+    }
+    
+    .intro{
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        align-self: center;
+
+        font-size: 2.125rem;
+        padding-right: 5em;
+    }
+
+    .images{
+        grid-column: 3 / -1;
+        grid-row: 1 / 3;
+    }
+
+    .flexbox{
+        font-size: 1.9rem;
+    }
+}
+
+@media (min-width: 65em){
+    .flexbox{
+        flex-wrap: nowrap;
+    }
+
+    .flex{
+        max-width: 400px;
+    }
+}
+
+
+
+
+
+
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes down{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
